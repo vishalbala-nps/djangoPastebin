@@ -17,7 +17,7 @@ def api_snip(request, format=None):
    
    if request.method == 'GET':
       slist = []
-      all_snips = snips.objects.all()
+      all_snips = snips.objects.all().order_by('-id')
       for i in all_snips:
          slist.append({'id':i.id,'title':i.title,'publishedOn':i.pubDate})
       return Response(slist)
