@@ -1,7 +1,9 @@
 # djangoPastebin
 A Pastebin web app built using django
 # Overview
-This is a Pastebin Web App written in Python using Django. Right now, only the backend is implemented
+This is a Pastebin Web App written in Python using Django.
+# Frontend
+This project includes a frontend as well. You can access it at `127.0.0.1:8000/`
 # API Documentation (Backend)
  - api/snips
 	 - GET - Lists all the snips available.
