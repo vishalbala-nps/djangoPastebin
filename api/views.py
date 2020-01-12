@@ -1,6 +1,8 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
+from django.shortcuts import get_object_or_404
+
 from api.models import snips
 from datetime import *
 @api_view(['GET'])
@@ -29,3 +31,8 @@ def api_snip(request, format=None):
       new_snip.save()
 
       return Response({'message': str(new_snip.id)})   
+
+@api_view(['GET'])
+def list_snip(request, id):
+   msnip = get_object_or_404(snips, id=id)
+   return Response({'title': msnip.title,'text':msnip.text,'pubDate':msnip.pubDate})

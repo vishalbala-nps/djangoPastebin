@@ -5,6 +5,6 @@ from . import views
 
 urlpatterns = [
     url('snips/', views.api_snip),
-    url('/', views.home),
+    url('^snip/(?P<id>\d+)$', views.list_snip),
 ]
 
