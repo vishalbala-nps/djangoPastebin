@@ -5,6 +5,7 @@ from django.shortcuts import get_object_or_404
 
 from api.models import snips
 from datetime import *
+
 @api_view(['GET'])
 def home(request, format=None):
    return Response({
