@@ -9,7 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
     .list-group{
-        max-height: 500px;
+        max-height: 550px;
         margin-bottom: 10px;
         overflow:auto;
         overflow-y:auto;
@@ -39,7 +39,7 @@
         <ul class="list-group">
             {% for i in slist %}
             <li class="list-group-item">
-                <a href="/web/{{ slist[loop.index0]['id'] }}">{{ slist[loop.index0]['title'] }}</a>
+                <a href="/web/view/{{ slist[loop.index0]['id'] }}">{{ slist[loop.index0]['title'] }}</a>
                 <br>
                 <small>Published On:{{ slist[loop.index0]['publishedOn'] }}</small>
             </li>
@@ -49,9 +49,20 @@
         </div>
 
         <div class="col-sm-6 nopadding">
-            <h1>About the project</h1>
-            <h4>This is a simple Flask Web App written in Python. This app lets you store, view and download text files</h4>
-            <h4>To upload a file, click on upload a file</h4>
+           <h3>New Paste:</h3>
+            <form action = "/web/" method = "post" enctype="multipart/form-data">
+                  <div class="form-group">
+                     <input type="text" class="form-control" id="title" placeholder="Title here" name="title" value="Untitled Paste">
+                  </div>
+
+                  <div class="form-group">
+                     <textarea rows = "20" cols = "90" class="form-control" name = "text" placeholder="Content here"></textarea>
+                  </div>
+
+                  <div class="form-group">
+                        <input type = "submit" value="Create New Paste" class="btn btn-success">
+                  </div>
+            </form>
         </div>
     </div>
   </div>

@@ -26,11 +26,11 @@ urlpatterns += [
 ]
 
 urlpatterns += [
-    path('web', include('frontend.urls')),
+    path('web/', include('frontend.urls')),
 ]
 
 urlpatterns += [
-    path('', RedirectView.as_view(url='api/', permanent=True)),
+    path('', RedirectView.as_view(url='web/', permanent=True)),
 ]
 
 
