@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.shortcuts import redirect
 
 from api.models import snips
 import requests
@@ -17,7 +18,7 @@ def home(request):
       message = request.POST.get('text')
       resp = requests.post("http://"+request.get_host()+"/api/snips/", {"title": title,"text": message})
       sid = json.loads(resp.text)["message"]
-      return HttpResponse(str(sid))
+      return redirect('/web/view/'+sid)
 
 def viewsnip(request,id):
 
