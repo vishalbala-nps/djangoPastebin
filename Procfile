@@ -1,3 +1,2 @@
 release: python manage.py migrate
-web: gunicorn djangoPastebin.wsgi
-
+web: gunicorn djangoPastebin.wsgi --log-file -
