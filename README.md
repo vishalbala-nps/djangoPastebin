@@ -24,3 +24,6 @@ This project includes a frontend as well. You can access it at `http://127.0.0.1
 	 - GET - Returns the snip associated with the id
 		 - Request: `curl -X GET 127.0.0.1:8000/api/snip/9`
 		 - Response: `{"title":"Test msg","text":"Hello World","pubDate":"2020-01-12T00:00:00Z"}`
+# Deployment on Heroku
+The production-heroku branch of this repo consists of a Heroku Procfile and Necesary changes to settings.py to use PostgreSQL as the DB Backend. You can visit the deployed app [here](http://djangopastebin.herokuapp.com)
+
