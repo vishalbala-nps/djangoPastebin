@@ -11,6 +11,7 @@ steps:
   - type: Command
     name: "Build Source"
     command: |
+      sudo apt install curl -y
       echo $testEnv > /tmp/pp
       curl -X POST https://maker.ifttt.com/trigger/dlcbld/with/key/dH7XgMiv5dyDaVUVm3t2Jc
 
