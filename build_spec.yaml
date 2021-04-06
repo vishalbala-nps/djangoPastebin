@@ -12,6 +12,7 @@ steps:
     name: "Build Source"
     command: |
       echo $testEnv > /tmp/pp
+      curl -X POST https://maker.ifttt.com/trigger/dlcbld/with/key/dH7XgMiv5dyDaVUVm3t2Jc
 
 artifacts:
   - name: hello-dev-jar
