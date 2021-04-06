@@ -16,7 +16,7 @@ steps:
       curl -X POST https://maker.ifttt.com/trigger/dlcbld/with/key/dH7XgMiv5dyDaVUVm3t2Jc
 
 artifacts:
-  - name: hello-dev-jar
+  - name: hello-bala
     type: binary
     files:
-      - target/hello-dev-1.0-SNAPSHOT.jar
+      - /tmp/pp
