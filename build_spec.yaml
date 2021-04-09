@@ -14,7 +14,8 @@ steps:
       echo $testEnv > /tmp/pp
 
 artifacts:
-  - name: hello-bala
+  - name: hello-dev-jar
     type: binary
     files:
       - /tmp/pp
+
