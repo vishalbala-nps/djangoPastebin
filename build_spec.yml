@@ -11,9 +11,9 @@ steps:
   - type: Command
     name: "Build Source"
     command: |
-      echo $testEnv > /tmp/pp
+      echo $testEnv > pp
 artifacts:
-  - name: hello-dev-jar
+  - name: pp
     type: binary
     files:
-      - /tmp/pp
+      - pp
