@@ -15,7 +15,7 @@ steps:
 
 artifacts:
   - name: hello-dev-jar
-    type: binary
+    type: BINARY
     files:
       - /tmp/pp
 
