@@ -11,9 +11,9 @@ steps:
   - type: Command
     name: "Build Source"
     command: |
-      echo $testEnv > pp1
+      echo $testEnv > pp2
 artifacts:
   - name: pp
     type: BINARY
     files:
-      - pp1
+      - pp2
