@@ -27,5 +27,3 @@ This project includes a frontend as well. You can access it at `http://127.0.0.1
 # Deployment on Heroku
 The production-heroku branch of this repo consists of a Heroku Procfile and Necesary changes to settings.py to use PostgreSQL as the DB Backend. You can visit the deployed app [here](http://djangopastebin.herokuapp.com)
 
-
-
