@@ -15,5 +15,4 @@ steps:
 outputArtifacts:
   - name: pp
     type: BINARY
-    files:
-      - pp4
+    location: pp4
