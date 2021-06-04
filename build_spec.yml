@@ -12,7 +12,7 @@ steps:
     name: "Build Source"
     command: |
       echo $testEnv > pp4
-artifacts:
+outputArtifacts:
   - name: pp
     type: BINARY
     files:
